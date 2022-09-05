@@ -1,11 +1,41 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import LandingView from '../views/LandingView.vue'
+import SignInView from '../views/SignInView.vue'
+import SignUpView from '../views/SignUpView.vue'
+import MatchView from '../views/MatchView.vue'
 
 const routes = [
   {
     path: '/',
+    name: 'landing',
+    component: LandingView
+  },
+  {
+    path: '/signin',
+    name: 'signin',
+    component: SignInView
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: SignUpView
+  },
+  {
+    path: '/home',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    meta: {
+      layout: 'HomeLayout'
+    }
+  },
+  {
+    path: '/match',
+    name: 'match',
+    component: MatchView,
+    meta: {
+      layout: 'HomeLayout'
+    }
   },
   {
     path: '/about',
