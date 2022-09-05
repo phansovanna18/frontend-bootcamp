@@ -1,5 +1,5 @@
 <template>
-  <div  className='flex justify-between'>
+  <div  className='flex justify-between bg-[#F5FAFF]'>
     <LeftSideBarComponent/>
     <slot />
     <RightSideBarComponent/>

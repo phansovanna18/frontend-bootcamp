@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <div class="max-w-sm">
-      <ProfileCard />
-    </div>
+  <div class="max-w-sm">
+    <ProfileCard />
   </div>
 </template>
 

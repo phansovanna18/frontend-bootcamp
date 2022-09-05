@@ -20,24 +20,6 @@
       </div>
     </div>
   </a>
-  <div class="flex justify-between px-12 h-1">
-    <div>
-      <img
-        width="60px"
-        height="60px"
-        src="@/assets/icons/ico_cancel.png"
-        alt=""
-      />
-    </div>
-    <div>
-      <img
-        width="60px"
-        height="60px"
-        src="@/assets/icons/ico_heart.png"
-        alt=""
-      />
-    </div>
-  </div>
 </template>
 
 <script>

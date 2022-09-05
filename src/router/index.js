@@ -4,6 +4,9 @@ import LandingView from '../views/LandingView.vue'
 import SignInView from '../views/SignInView.vue'
 import SignUpView from '../views/SignUpView.vue'
 import MatchView from '../views/MatchView.vue'
+import LikeView from '../views/LikeView.vue'
+import SettingView from '../views/SettingView.vue'
+import ProfileView from '../views/ProfileView.vue'
 
 const routes = [
   {
@@ -33,6 +36,30 @@ const routes = [
     path: '/match',
     name: 'match',
     component: MatchView,
+    meta: {
+      layout: 'HomeLayout'
+    }
+  },
+  {
+    path: '/like',
+    name: 'like',
+    component: LikeView,
+    meta: {
+      layout: 'HomeLayout'
+    }
+  },
+  {
+    path: '/setting',
+    name: 'setting',
+    component: SettingView,
+    meta: {
+      layout: 'HomeLayout'
+    }
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: ProfileView,
     meta: {
       layout: 'HomeLayout'
     }
