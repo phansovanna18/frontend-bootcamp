@@ -3,9 +3,9 @@
     <div>
       <ProfileComponent />
     </div>
-    <div class="flex justify-between">
-      <button @click="alert('hello')">a</button>
-      <div>a</div>
+    <div class="flex justify-between px-15">
+      <v-btn icon="mdi-close" color="#CDCDD7"></v-btn>
+      <v-btn icon="mdi-heart" color="#EF5DA8" class="text-white"></v-btn>
     </div>
   </div>
 </template>

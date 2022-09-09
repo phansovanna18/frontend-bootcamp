@@ -7,6 +7,7 @@ import MatchView from '../views/MatchView.vue'
 import LikeView from '../views/LikeView.vue'
 import SettingView from '../views/SettingView.vue'
 import ProfileView from '../views/ProfileView.vue'
+import EditProfileView from '../views/EditProfileView.vue'
 
 const routes = [
   {
@@ -62,7 +63,15 @@ const routes = [
     component: ProfileView,
     meta: {
       layout: 'HomeLayout'
-    }
+    },
+  },
+  {
+    path: '/profile/edit',
+    name: 'profileedit',
+    component: EditProfileView,
+    meta: {
+      layout: 'HomeLayout'
+    },
   },
   {
     path: '/about',

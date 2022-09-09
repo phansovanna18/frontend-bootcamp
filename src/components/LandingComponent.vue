@@ -2,7 +2,7 @@
   <div class="h-[100%] bg-background mx-auto max-w-screen-xl pt-16">
     <div class="flex justify-between items-center">
       <div class="flex items-center space-x-2 justify-center">
-        <img class="w-[60px] h-[60px]" src="@/assets/images/logo.png" alt="" />
+        <img class="w-[60px] h-[60px]" :src="require('@/assets/images/logo.png')" alt="" />
         <h3>Matchaa!</h3>
       </div>
       <div>
@@ -38,7 +38,7 @@
       </div>
 
       <div class="max-w-xl">
-        <img src="@/assets/images/landing_page.png" alt="" />
+        <img :src="require('@/assets/images/landing_page.png')" alt="" />
       </div>
     </div>
   </div>

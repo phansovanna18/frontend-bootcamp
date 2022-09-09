@@ -4,7 +4,7 @@
       class="bg-[#FFE2E2]/40 w-[100%] py-8 rounded-xl shadow-lg shadow-[#FFE2E2]/40"
     >
       <div class="flex items-center space-x-2 justify-center">
-        <img class="w-[60px] h-[60px]" src="@/assets/images/logo.png" alt="" />
+        <img class="w-[60px] h-[60px]" :src="require('@/assets/images/logo.png')" alt="" />
         <h3>Matchaa!</h3>
       </div>
       <div class="flex flex-col px-32 my-6">

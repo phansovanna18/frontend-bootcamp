@@ -1,10 +1,6 @@
 <template>
-  <a href="#" class="relative max-w-sm rounded-2xl">
-    <img
-      class=""
-      src="@/assets/images/profile1.png"
-      alt="image description"
-    />
+  <div class="relative max-w-sm rounded-2xl">
+    <img  :src="require('@/assets/images/profile1.png')" alt="" />
     <div class="absolute bottom-14 px-10 text-lg text-black">
       <div class="bg-white p-4 rounded-2xl">
         <div class="text-center">
@@ -19,7 +15,7 @@
         </div>
       </div>
     </div>
-  </a>
+  </div>
 </template>
 
 <script>
