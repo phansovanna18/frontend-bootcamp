@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div>
-      <ProfileComponent />
+      <ProfileCard />
     </div>
     <div class="flex justify-between px-15">
       <v-btn icon="mdi-close" color="#CDCDD7"></v-btn>
@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import ProfileComponent from "@/components/ProfileComponent.vue";
+import ProfileCard from "@/components/Profile/ProfileCard.vue";
 export default {
   components: {
-    ProfileComponent,
+    ProfileCard,
   },
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-sm">
-    <ProfileCard />
+    <ProfileCard :me="true"/>
   </div>
 </template>
 

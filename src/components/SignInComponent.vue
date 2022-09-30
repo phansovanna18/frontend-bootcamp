@@ -12,6 +12,7 @@
           class="flex items-center my-2 px-4 py-2 rounded-xl h-[46px] shadow-lg bg-white shadow-[#EF5DA8]/20"
         >
           <input
+            v-model="username"
             class="bg-transparent outline-none"
             placeholder="Username"
           />
@@ -21,14 +22,16 @@
           class="flex items-center h-[46px] justify-between bg-white my-2 px-4 py-2 rounded-xl shadow-lg shadow-[#EF5DA8]/20"
         >
           <input
+            v-model="password"
             class=" bg-transparent outline-none"
             placeholder="Password"
+            type="password"
           />
           <img src="{icoBlind}" class="w-[16px] h-[16px]" alt="" />
         </div>
       </div>
       <div class="flex flex-col items-center justify-center">
-        <v-btn to="/home" class="bg-[#EF5DA8] rounded-3xl px-16 py-2 text-white">
+        <v-btn @click="methodSignIn()" class="bg-[#EF5DA8] rounded-3xl px-16 py-2 text-white">
           Log In
         </v-btn>
         <div class="flex items-center space-x-2 justify-center mt-6">
@@ -52,7 +55,35 @@
 </template>
 
 <script>
-export default {};
+import axios from 'axios'
+export default {
+  data: () => ({
+    username: '',
+    password: ''
+  }),
+  methods:{
+    methodSignIn(){
+      axios
+        .post(
+          `${process.env.VUE_APP_API_URL}/sessions`,
+          {
+            username: this.username,
+            password: this.password,
+          },
+          {}
+        )
+        .then((result) => {
+          localStorage.setItem('token', result.data.accessToken)
+          this.$router.push('/home')
+          console.log(result);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      
+    }
+  }
+};
 </script>
 
 <style>

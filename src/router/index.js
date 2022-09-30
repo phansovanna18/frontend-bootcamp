@@ -3,11 +3,30 @@ import HomeView from '../views/HomeView.vue'
 import LandingView from '../views/LandingView.vue'
 import SignInView from '../views/SignInView.vue'
 import SignUpView from '../views/SignUpView.vue'
+import SignUpInfoView from '../views/SignUpInfoView.vue'
+import SignOutView from '../views/SignOutView.vue'
 import MatchView from '../views/MatchView.vue'
 import LikeView from '../views/LikeView.vue'
 import SettingView from '../views/SettingView.vue'
 import ProfileView from '../views/ProfileView.vue'
 import EditProfileView from '../views/EditProfileView.vue'
+
+
+const _next = async (to, from, next) => {
+  const token = localStorage.getItem('token')
+  console.log(token)
+  if (token === null || token === undefined) {
+    if (to.path.includes('signin'))
+      next();
+    next("/signin");
+    return
+  } else if (to.path.includes('signin')) {
+    next('/home');
+  }
+  next();
+};
+
+
 
 const routes = [
   {
@@ -18,7 +37,8 @@ const routes = [
   {
     path: '/signin',
     name: 'signin',
-    component: SignInView
+    component: SignInView,
+    beforeEnter: _next
   },
   {
     path: '/signup',
@@ -26,8 +46,20 @@ const routes = [
     component: SignUpView
   },
   {
+    path: '/signupinfo',
+    name: 'signupinfo',
+    beforeEnter: _next,
+    component: SignUpInfoView
+  },
+  {
+    path: '/signout',
+    name: 'signout',
+    component: SignOutView
+  },
+  {
     path: '/home',
     name: 'home',
+    beforeEnter: _next,
     component: HomeView,
     meta: {
       layout: 'HomeLayout'
@@ -36,6 +68,7 @@ const routes = [
   {
     path: '/match',
     name: 'match',
+    beforeEnter: _next,
     component: MatchView,
     meta: {
       layout: 'HomeLayout'
@@ -44,6 +77,7 @@ const routes = [
   {
     path: '/like',
     name: 'like',
+    beforeEnter: _next,
     component: LikeView,
     meta: {
       layout: 'HomeLayout'
@@ -52,6 +86,7 @@ const routes = [
   {
     path: '/setting',
     name: 'setting',
+    beforeEnter: _next,
     component: SettingView,
     meta: {
       layout: 'HomeLayout'
@@ -60,6 +95,7 @@ const routes = [
   {
     path: '/profile',
     name: 'profile',
+    beforeEnter: _next,
     component: ProfileView,
     meta: {
       layout: 'HomeLayout'
@@ -68,6 +104,7 @@ const routes = [
   {
     path: '/profile/edit',
     name: 'profileedit',
+    beforeEnter: _next,
     component: EditProfileView,
     meta: {
       layout: 'HomeLayout'

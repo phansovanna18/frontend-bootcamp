@@ -1,18 +1,16 @@
 <template>
-  <MatchComponent/>
+  <MatchComponent />
 </template>
 
 <script>
-import MatchComponent from '@/components/MatchComponent.vue'
+import MatchComponent from "@/components/MatchComponent.vue";
 
 export default {
-    components:{
-        MatchComponent
-    }
-
-}
+  components: {
+    MatchComponent,
+  },
+};
 </script>
 
 <style>
-
 </style>

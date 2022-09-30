@@ -1,7 +1,9 @@
 <template>
   <div class="flex flex-col items-center w-[80px] h-screen bg-[#CDCDD7]">
     <a href="/profile" class="flex items-center my-4">
-      <img class="w-[60px] h-[60px] object-cover rounded-full" :src="require('@/assets/images/profile1.png')" alt="" />
+      <div class="pb-4 text-[rgb(199,88,88)]">
+        <i class="fa-solid fa-user fa-2xl"></i>
+      </div>
     </a>
     <a href="/setting" class="flex flex-col items-center mb-2 mt-8">
       <!-- <img width="40px" height="40px" src="@/assets/icons/ico_heart.png" alt="" /> -->
@@ -10,12 +12,11 @@
       </div>
       <span>Setting</span>
     </a>
-    <a href="#" class="flex flex-col items-center my-2">
-      <!-- <img width="40px" height="40px" src="@/assets/icons/ico_heart.png" alt="" /> -->
-      <div class="pb-4 text-[#8A86C3]">
-        <i class="fa-solid fa-share fa-2xl"></i>
+    <a href="/signout" class="flex flex-col items-center my-2">
+      <div class="pb-4 text-[#C75858]">
+        <i class="fa-solid fa-right-from-bracket fa-2xl"></i>
       </div>
-      <span>Share</span>
+      <span class="text-[#C75858]">Sign Out</span>
     </a>
     <!-- <div class="flex flex-col items-center my-2">
       <img width="40px" height="40px" src="@/assets/icons/ico_heart.png" alt="" />
