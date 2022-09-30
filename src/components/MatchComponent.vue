@@ -2,7 +2,7 @@
   <div class="container my-16">
     <div class="text-2xl font-semibold">What a match!</div>
     <div class="grid grid-cols-6 gap-4 pt-6">
-      <MiniProfileCard v-for="x in [1, 2, 3, 4, 5]" :key="x" />
+      <MiniProfileCard v-for="x in users" :user="x" :key="x.name" />
     </div>
   </div>
 </template>
@@ -16,7 +16,32 @@ export default {
     MiniProfileCard,
   },
   data: () => ({
-    users: []
+    users: [
+      {
+        name: "Thida Mok",
+        bio: "I feel Okay with other situtaion",
+        age: 24,
+        profile: "f.jpg",
+      },
+      {
+        name: "Chhatra Lady kaka",
+        bio: "I feel I cute more than other girl",
+        age: 24,
+        profile: "c.jpg",
+      },
+      {
+        name: "Sochata",
+        bio: "I shy to have boy friend",
+        age: 24,
+        profile: "d.jpg",
+      },
+      {
+        name: "David",
+        bio: "Im single, I want a girl friend",
+        age: 24,
+        profile: "e.jpg",
+      },
+    ],
   }),
   methods: {
     getProfiles(){
@@ -38,7 +63,7 @@ export default {
     }
   },
   mounted(){
-    this.getProfiles()
+    // this.getProfiles()
   }
 };
 </script>
